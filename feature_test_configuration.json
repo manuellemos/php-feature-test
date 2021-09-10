@@ -1,0 +1,69 @@
+{
+	"version": "$Id: $",
+	"comments": [
+		"."
+	],
+	"features":
+	{
+		"MySQL":
+		{
+			"class": "feature_test_mysql_class",
+			"driver": "mysql.php",
+			"nooutput": true
+		},
+		"MySQLi":
+		{
+			"class": "feature_test_mysqli_class",
+			"driver": "mysqli.php",
+			"nooutput": true
+		},
+		"Server API":
+		{
+			"class": "feature_test_sapi_class",
+			"driver": "sapi.php",
+			"nooutput": true
+		},
+		"OpenSSL":
+		{
+			"class": "feature_test_openssl_class",
+			"driver": "openssl.php",
+			"nooutput": true
+		},
+		"Sendmail":
+		{
+			"class": "feature_test_sendmail_class",
+			"driver": "sendmail.php",
+			"nooutput": true
+		},
+		"SSL Client":
+		{
+			"class": "feature_test_ssl_client_class",
+			"driver": "ssl_client.php",
+			"nooutput": true
+		},
+		"TrueType Fonts":
+		{
+			"class": "feature_test_ttf_class",
+			"driver": "ttf.php",
+			"nooutput": true
+		},
+		"Upload Progress Extension":
+		{
+			"class": "feature_test_upload_progress_class",
+			"driver": "upload_progress.php",
+			"nooutput": true
+		},
+		"Zend Opcache Extension":
+		{
+			"class": "feature_test_zend_opcache_class",
+			"driver": "zend_opcache.php",
+			"nooutput": true
+		},
+		"Zlib":
+		{
+			"class": "feature_test_zlib_class",
+			"driver": "zlib.php",
+			"nooutput": true
+		}
+	}
+}
