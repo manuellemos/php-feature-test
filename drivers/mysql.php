@@ -33,7 +33,8 @@ class feature_test_mysql_class extends feature_test_driver_class
 			}
 			else
 			{
-				if($connection['scheme'] === 'mysql')
+				if(IsSet($connection['scheme'])
+				&& $connection['scheme'] === 'mysql')
 				{
 					if(IsSet($connection['query']))
 						parse_str($connection['query'], $options);

@@ -35,7 +35,8 @@ class feature_test_mysqli_class extends feature_test_driver_class
 			}
 			else
 			{
-				if($connection['scheme'] === 'mysqli')
+				if(IsSet($connection['scheme'])
+				&& $connection['scheme'] === 'mysqli')
 				{
 						if(IsSet($connection['query']))
 							parse_str($connection['query'], $options);
