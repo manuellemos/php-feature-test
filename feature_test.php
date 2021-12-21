@@ -139,38 +139,10 @@ class feature_test_class
 				'class'=>'string',
 				'driver'=>'file',
 				'nooutput'=>'boolean'
-/*
-				'oauth_version'=>'string',
-				'request_token_url'=>'string',
-				'dialog_url'=>'string',
-				'reauthenticate_dialog_url'=>'string',
-				'pin_dialog_url'=>'string',
-				'offline_dialog_url'=>'string',
-				'access_token_url'=>'string',
-				'append_state_to_redirect_uri'=> 'string',
-				'authorization_header'=>'boolean',
-				'url_parameters' => 'boolean',
-				'token_request_method'=>'string',
-				'signature_method'=>'string',
-				'access_token_authentication'=>'string',
-				'access_token_parameter'=>'string',
-				'default_access_token_type'=>'string',
-				'store_access_token_response'=>'boolean',
-				'refresh_token_authentication'=>'string',
-				'grant_type'=>'string',
-				'access_token_content_type'=>'string',
-				'revoke_token_url'=>'string'
-*/
 			);
 			$required = array(
 				'class'=>array(),
 				'driver'=>array(),
-/*
-				'oauth_version'=>array(),
-				'request_token_url'=>array('1.0', '1.0a'),
-				'dialog_url'=>array(),
-				'access_token_url'=>array(),
-*/
 			);
 			$test_properties = array();
 			foreach($properties as $property => $value)
@@ -234,20 +206,8 @@ class feature_test_class
 				$__name = $this->test_list[$__a];
 				if(!IsSet($this->tests[$__name]))
 				{
-					if(!IsSet($__test_sets[$__name]))
-					{
-						$this->error = $__name." is not a valid test name";
-						return false;
-					}
-					foreach($__test_sets[$__name] as $__set_name)
-					{
-						if(!IsSet($this->tests[$__set_name]))
-						{
-							$this->error = $__set_name." is not a valid test name from the set ".$__name;
-							return false;
-						}
-						$__few[$__set_name] = $this->tests[$__set_name];
-					}
+					$this->error = $__name." is not a valid test name";
+					return false;
 				}
 				else
 					$__few[$__name] = $this->tests[$__name];
