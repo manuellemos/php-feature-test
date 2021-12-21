@@ -5,6 +5,12 @@
 	],
 	"features":
 	{
+		"Date and Time":
+		{
+			"class": "feature_test_date_and_time_class",
+			"driver": "date_and_time.php",
+			"nooutput": true
+		},
 		"MySQL":
 		{
 			"class": "feature_test_mysql_class",

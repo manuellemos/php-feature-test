@@ -44,6 +44,8 @@
 	$options->cipher = 'bf-ecb';
 	$options->ssl_url = 'https://www.phpclasses.org/';
 	$options->upload_progress = true;
+	$options->intl = true;
+	$options->strftime = false;
 
 	$feature_test->options = $options;
 
