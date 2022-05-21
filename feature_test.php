@@ -206,7 +206,13 @@ class feature_test_class
 				$__name = $this->test_list[$__a];
 				if(!IsSet($this->tests[$__name]))
 				{
-					$this->error = $__name." is not a valid test name";
+					$this->error = $__name." is not a valid test name from the list of available tests: ";
+					$first_test = true;
+					foreach(array_keys($this->tests) as $test_name)
+					{
+						$this->error .= ($first_test ? '' : ', ').$test_name;
+						$first_test = false;
+					}
 					return false;
 				}
 				else
@@ -314,7 +320,7 @@ class feature_test_class
 					$this->EchoOutput("\n".'It was not specified a means to check the test script output.'."\n".str_repeat('_',80)."\n");
 					continue;
 				}
-				if($expected !== '')
+				if($expected !== $output)
 				{
 					$generated=$this->GetGeneratedPath($__name);
 					if(!($file = fopen($generated, 'wb')))
