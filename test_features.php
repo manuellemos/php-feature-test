@@ -43,6 +43,7 @@
 	$options->database_options = array();
 	$options->cipher = 'bf-ecb';
 	$options->ssl_url = 'https://www.phpclasses.org/';
+	$options->ssl_url_user = '';
 	$options->upload_progress = true;
 	$options->intl = true;
 	$options->strftime = false;
