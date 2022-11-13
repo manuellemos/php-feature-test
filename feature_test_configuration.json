@@ -47,6 +47,12 @@
 			"driver": "ssl_client.php",
 			"nooutput": true
 		},
+		"POSIX":
+		{
+			"class": "feature_test_posix_class",
+			"driver": "posix.php",
+			"nooutput": true
+		},
 		"TrueType Fonts":
 		{
 			"class": "feature_test_ttf_class",
