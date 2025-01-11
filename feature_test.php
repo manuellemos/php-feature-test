@@ -14,6 +14,20 @@ class feature_test_driver_class
 	public $error = '';
 	protected $results = '';
 
+	Function loadclassfromoption($class, $option)
+	{
+		if(!class_exists($class))
+		{
+			if(!IsSet($this->options->$option))
+			{
+				$this->error = 'the '.$option.' is not defined';
+				return false;
+			}
+			require($this->options->$option);
+		}
+		return true;
+	}
+	
 	Function Initialize()
 	{
 		foreach($this->required_options as $option)
